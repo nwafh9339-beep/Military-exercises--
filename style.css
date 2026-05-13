@@ -1,137 +1,164 @@
+/* الإعدادات العامة */
 body {
-    background-color: #0a0a0a;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a2a3a; /* خلفية الموقع زرقاء مائلة داكنة */
+    color: #e0e0e0;
+    font-family: 'Cairo', sans-serif;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    padding: 0;
+    line-height: 1.6;
 }
 
-.main-wrapper {
-    width: 90%;
-    max-width: 800px;
+header {
+    /* تغيير الخلفية إلى متدرج أزرق مائل بدلاً من الصورة */
+    background: linear-gradient(135deg, #1f3a53 0%, #1a2a3a 100%);
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #2ecc71; /* أخضر عسكري (حافظت عليه) */
     text-align: center;
 }
 
-/* العناوين */
-.glow-text {
-    color: #a855f7;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
-    margin-bottom: 5px;
+header h1 {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(46, 204, 113, 0.5);
 }
 
-.subtitle {
-    color: #444;
-    font-size: 0.8rem;
-    margin-bottom: 40px;
+header p {
+    color: #e0e0e0;
+    margin: 10px 0 0;
 }
 
-/* البطاقة البنفسجية الكبيرة */
-.main-action-card {
-    background: linear-gradient(90deg, #6b21a8, #a855f7);
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(107, 33, 168, 0.4);
-    transition: 0.3s;
 }
 
-.main-action-card:hover {
-    transform: scale(1.02);
+section {
+    background: #253a4e; /* خلفية الأقسام بلون أزرق مائل أفتح قليلاً */
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    border-right: 5px solid #2ecc71;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
-/* البطاقات الصغيرة */
-.secondary-cards {
+h2 {
+    color: #2ecc71;
+    border-bottom: 1px solid #3d5a71;
+    padding-bottom: 10px;
+}
+
+/* القوائم */
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    background: #314a60; /* خلفية العناصر بلون أزرق مائل */
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    position: relative;
+    padding-right: 35px;
+}
+
+.rules-list li::before {
+    content: "✔️";
+    position: absolute;
+    right: 10px;
+    color: #2ecc71;
+}
+
+/* القيادة */
+.staff-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-bottom: 25px;
+    margin-top: 20px;
 }
 
-.small-card {
-    background-color: #121212;
-    border: 1px solid #222;
-    padding: 40px 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.3s;
+.staff-card {
+    background: #314a60;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #3d5a71;
 }
 
-.small-card:hover {
-    border-color: #a855f7;
-    background-color: #181818;
-}
+.staff-card h3 { color: #2ecc71; margin-bottom: 5px; }
 
-.small-card .icon {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-/* صندوق الإدارة */
-.management-box {
-    background-color: #121212;
-    border: 1px solid #222;
-    border-radius: 20px;
-    padding: 30px;
-    position: relative;
-}
-
-.tag {
-    background-color: #3b0764;
-    color: #a855f7;
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.management-grid {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 25px;
+.discord {
+    display: block;
+    font-size: 0.9rem;
+    color: #bbb;
+    background: #1a2a3a;
+    padding: 5px;
+    border-radius: 4px;
     margin-top: 10px;
 }
 
-.role {
+/* الأوامر */
+.commands-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.cmd-box {
+    background: #1a2a3a;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+code {
+    background: #2ecc71;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 4px;
     display: block;
-    color: #a855f7;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+    margin: 10px 0;
+    font-weight: bold;
 }
 
-.name {
-    color: #ccc;
-    font-family: monospace;
-    font-size: 1.1rem;
+.warning { color: #ff6b6b; font-size: 0.85rem; margin-top: 10px; }
+
+/* الروابط */
+.links-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.staff-names {
-    color: #888;
-    font-family: monospace;
-    letter-spacing: 1px;
+.link-card {
+    background: #2ecc71;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-/* التذييل */
+.link-card:hover {
+    background: #27ae60;
+    transform: translateY(-5px);
+}
+
 footer {
-    margin-top: 40px;
+    text-align: center;
+    padding: 40px;
+    color: #bbb;
+    font-size: 0.9rem;
 }
 
-.divider {
-    height: 1px;
-    background: #222;
-    margin-bottom: 20px;
+/* استجابة الجوال */
+@media (max-width: 768px) {
+    .staff-grid, .commands-grid { grid-template-columns: 1fr; }
 }
-
-footer h4 { color: #666; margin-bottom: 5px; }
-footer p { color: #444; font-size: 0.85rem; line-height: 1.6; }
